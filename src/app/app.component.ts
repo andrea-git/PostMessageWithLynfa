@@ -60,11 +60,12 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
       <button (click)="sendChunk()" style="width: 250px;">
         TEST CSV CHUNK
       </button>
-      <button (click)="callMsitbs()" style="width: 250px;">MSITBS</button>
+      <button (click)="callMsitbs()" style="width: 250px;">
+        MSITBS (6280)
+      </button>
       <button (click)="gesDitta()" style="width: 250px;">
         ANADITTE (1031)
       </button>
-      <button (click)="sendCsv()" style="width: 250px;">SEND CSV</button>
     </div>
   `,
 })
@@ -446,7 +447,7 @@ export class AppComponent {
       {
         cmd: 'prms',
         payload:
-          'functionName=GetConta;procavpName=MSITBS;companyId=30;sDate=01/01/2019;eDate=31/12/2019;minorRelease=0;majorRelease=1;',
+          'functionName=GetConta;procavpName=MSITBS;companyId=6280;sDate=01/01/2021;eDate=31/12/2021;minorRelease=0;majorRelease=1;bType=O1',
       },
       '*'
     );
